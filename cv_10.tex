@@ -1,0 +1,151 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Friggeri Resume/CV
+% XeLaTeX Template
+% Version 1.2 (3/5/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Adrien Friggeri (adrien@friggeri.net)
+% https://github.com/afriggeri/CV
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX and the bibliography, if used,
+% needs to be compiled with biber rather than bibtex.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
+\addbibresource{bibliography.bib} % Specify the bibliography file to include publications
+
+
+\begin{document}
+
+\header{Michal}{ Cyprian}{Associate Software Engineer} % Your name and current job title/field
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{aside} % In the aside, each new line forces a line break
+\section{contact}
+Mládežnícka 28
+Banská Bystrica 974 04
+Slovakia
+~
++421 911 290 094
++420 737 077 485
+~
+\href{mailto:m.cyprian@gmail.com}{m.cyprian[at]gmail.com}
+\section{languages}
+slovak, czech
+english
+french basics
+\section{skills}
+Python, Linux
+C, C++, SQL, Bash
+\end{aside}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{education}
+
+\begin{entrylist}
+
+%------------------------------------------------
+
+\entry
+{2014--now}
+{Bachelor {\normalfont of Information Technology}}
+{Brno University of Technology}
+
+
+%------------------------------------------------
+
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{experience}
+
+
+\begin{entrylist}
+
+%------------------------------------------------
+
+\entry
+{2015--Now}
+{RED HAT}
+{Brno, Czech Republic}
+{\emph{Associate Software Engineer: February 2016 - Now} \\
+\emph{Intern: July 2015 - January 2016} \\
+Maintaning RPM packages of python and related libraries
+in Fedora and RHEL.
+\\Developing pyp2rpm, tool for converting PyPI packages into specfiles
+\\Involved in the effort of moving Fedora to Python 3 as default}
+
+%------------------------------------------------
+
+\entry
+{2015--2016}
+{Brno University of Technology}
+{Brno, Czech Republic}
+{\emph{University research group member} \\ Working on data processing and machine learning}
+
+\end{entrylist}
+
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{certificates}
+
+\begin{entrylist}
+
+%------------------------------------------------
+
+\entry
+{2016}
+{Red Hat Certified System Administrator}
+{Red Hat}
+{Red Hat Enterprise Linux 7 ID:160-192-647}
+
+%------------------------------------------------
+
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{interests}
+
+\textbf{professional:} algorithms, programming, problem-solving \\\textbf{personal:} fitness, running, volleyball, hiking, reading
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{volunteering}
+
+\begin{entrylist}
+
+\entry
+{2017}
+{DEVCONF}
+{Brno}
+{Taking care of workshops in specific lab.}
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
