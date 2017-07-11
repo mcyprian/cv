@@ -22,6 +22,7 @@ all: main.pdf
 main.pdf: cv_10.tex
 	xelatex -output-dir output cv_10.tex
 	xelatex -output-dir output cv_10.tex
+	cp output/cv_10.pdf output/mcyprian_cv.pdf
 
 clean:
 	find ./output -iname '*.aux' | xargs rm
