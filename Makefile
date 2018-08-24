@@ -20,8 +20,7 @@ all: main.pdf
 
 # Have to compile twice because of the header
 main.pdf: cv_10.tex
-	xelatex -output-dir output cv_10.tex
-	xelatex -output-dir output cv_10.tex
+	./latexdockercmd.sh xelatex -output-dir output cv_10.tex
 	cp output/cv_10.pdf output/mcyprian_cv.pdf
 
 clean:
