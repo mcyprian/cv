@@ -1,0 +1,183 @@
+%!TEX TS-program = xelatex
+\documentclass[]{friggeri-cv}
+\usepackage{afterpage}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{smartdiagram}
+\usepackage{fontspec}
+% if you want to add fontawesome package
+% you need to compile the tex file with LuaLaTeX
+% References:
+%   http://texdoc.net/texmf-dist/doc/latex/fontawesome/fontawesome.pdf
+%   https://www.ctan.org/tex-archive/fonts/fontawesome?lang=en
+%\usepackage{fontawesome}
+\usepackage{metalogo}
+\usepackage{dtklogos}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,shadows}
+\hypersetup{
+    pdftitle={},
+    pdfauthor={},
+    pdfsubject={},
+    pdfkeywords={},
+    colorlinks=false,           % no lik border color
+    allbordercolors=white       % white border color for all
+}
+\smartdiagramset{
+    bubble center node font = \footnotesize,
+    bubble node font = \footnotesize,
+    % specifies the minimum size of the bubble center node
+    bubble center node size = 0.5cm,
+    %  specifies the minimum size of the bubbles
+    bubble node size = 0.5cm,
+    % specifies which is the distance among the bubble center node and the other bubbles
+    distance center/other bubbles = 0.3cm,
+    % sets the distance from the text to the border of the bubble center node
+    distance text center bubble = 0.5cm,
+    % set center bubble color
+    bubble center node color = pblue,
+    % define the list of colors usable in the diagram
+    set color list = {lightgray, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
+    % sets the opacity at which the bubbles are shown
+    bubble fill opacity = 0.6,
+    % sets the opacity at which the bubble text is shown
+    bubble text opacity = 0.5,
+}
+
+\addbibresource{bibliography.bib}
+\RequirePackage{xcolor}
+\definecolor{pblue}{HTML}{0395DE}
+
+\begin{document}
+\header{Michal}{Cyprian}
+      {Software Engineer}
+      
+% Fake text to add separator      
+\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
+.....
+}}
+
+% In the aside, each new line forces a line break
+\begin{aside}
+  \includegraphics[scale=0.18]{img/mcyprian.png}
+  \section{Address}
+    Mládežnícka 28
+    Banská Bystrica
+    974 04
+    Slovakia
+    ~
+  \section{Tel}
+    +421 911 290 094 
+    +420 737 077 485 
+    ~
+  \section{Mail}
+    \href{mailto:m.cyprian@gmail.com}{\textbf{m.cyprian@}\\gmail.com}
+    ~
+  \section{Languages}
+    \textbf{English}\includegraphics[scale=0.40]{img/4stars.png}
+    \textbf{French}\includegraphics[scale=0.40]{img/2stars.png}
+    \textbf{Slovak}\includegraphics[scale=0.40]{img/5stars.png}
+    ~
+  % use  \hspace{} or \vspace{} to change bubble size, if needed
+  \section{Technical Skills}
+    \smartdiagram[bubble diagram]{
+        \textbf{Python},
+        \textbf{Linux\vspace{4mm}},
+        \textbf{Bash\vspace{3mm}},
+        \textbf{SQL},
+        \textbf{JavaScript},
+        \textbf{C/C++},
+        \textbf{Docker},
+        \textbf{Go}
+    }
+    ~
+  \section{Personal Skills}
+    \smartdiagram[bubble diagram]{
+        \textbf{Leadership},
+        \textbf{Initiative},
+        \textbf{Enthusiasm},
+        \textbf{Problem}\\\textbf{Solving},
+        \textbf{\vspace{2mm}Hard working\vspace{2mm}},
+        \textbf{Team}\\\textbf{Player}
+    }
+    ~
+\end{aside}
+~
+\section{Experience}
+\begin{entrylist}
+  \entry
+    {07/18 - Now}
+    {Engineering Intern}
+    {Platform.sh}
+    {Working with container-based high availability cloud infrastructure, container testing
+    solutions and automation, Erasmus+ supported traineeship.\\}
+  \entry
+    {02/15 - 06/18}
+    {Associate Software Engineer}
+    {Red Hat}
+    {Maintenance of Python container image for OpenShift, Python automation tools, RPM packaging and
+    Software Collections.\\}
+  \entry
+    {07/14 - 02/15}
+    {Intern}
+    {Red Hat}
+    {RPM packaging, Python programming.\\}
+  \entry
+    {02/15 - 08/15}
+    {University research group member}
+    {Brno University of Technology}
+    {Working on data processing and machine learning.\\}
+\end{entrylist}
+~
+\section{Education}
+\begin{entrylist}
+  \entry
+    {2017 - now}
+    {Master's Degree in Applied Informatics}
+    {The Masaryk University, Brno}
+    {Service Science, Management, and Engineering program connects informatics profession with
+    multidisciplinary view of domains like management, selected parts of economy, namely of
+    marketing and practical skills.\\}
+  \entry
+    {2014 - 2017}
+    {Bachelor's Degree in Information Technology}
+    {Brno University of Technology}
+    {\emph{Web-Based Crash Data Querying Tool} \\The aim of this thesis is to design and implement
+    a tool set to sort, filter and join the data of FAF (Fedora Analysis Framework) server used
+    by developers to find common problems of software. The implemented changes improve user
+    experience and help developers to prioritize their work.\\}
+\end{entrylist}
+
+\section{Volunteering}
+\begin{entrylist}
+    \entry
+    {05/17 - 07/18}
+    {Ambassador}
+    {Fedora Project}
+    {Working on various projects related to Python stack, RPM packaging (PyPy), representing Fedora
+    Project on events and conferences.\\}
+
+  \entry
+    {03/2018}
+    {Assistant Coach}
+    {PyLadies CZ}
+    {Coaching attendees of free Python course for beginners.\\}
+
+  \entry
+    {01/2017}
+    {Session Chair}
+    {DevConf CZ}
+    {Taking care of workshops in specific lab.\\}
+\end{entrylist}
+
+%\section{Certifications}
+%\begin{entrylist}
+%  \entry
+%    {09/2016}
+%    {Red Hat Certified System Administrator}
+%    {Red Hat Enterprise Linux 7 ID:160-192-647}
+%\end{entrylist}
+
+\end{document}

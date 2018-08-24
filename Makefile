@@ -19,9 +19,9 @@ all: main.pdf
 # missing file reference and interactively asking you for an alternative.
 
 # Have to compile twice because of the header
-main.pdf: cv_10.tex
-	./latexdockercmd.sh xelatex -output-dir output cv_10.tex
-	cp output/cv_10.pdf output/mcyprian_cv.pdf
+main.pdf: cv.tex
+	./latexdockercmd.sh xelatex -output-dir output cv.tex
+	mv output/cv.pdf output/mcyprian_cv.pdf
 
 clean:
 	find ./output -iname '*.aux' | xargs rm
